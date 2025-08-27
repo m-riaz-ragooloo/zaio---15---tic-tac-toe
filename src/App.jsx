@@ -1,9 +1,7 @@
-function App() {
+import Router from "./Router"
+
+export default function App() {
   return (
-    <div>
-      Tic Tac Toe
-    </div>
+    <Router />
   )
 }
-
-export default App
