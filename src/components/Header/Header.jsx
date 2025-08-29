@@ -1,13 +1,16 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { HeaderWrapper } from "./Header.styled";
+import { HeaderWrapper, LightModeIcon, DarkModeIcon } from "./Header.styled";
+import TicTacToeLogo from "../../assets/svgs/tic-tac-toe.svg?react";
 
 export default function Header() {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, theme } = useContext(ThemeContext);
   return (
     <HeaderWrapper>
-      <h1>Logo</h1>
-      <button onClick={() => toggleTheme()}>Toggle Theme</button>
+      <TicTacToeLogo className="logo" />
+      <span onClick={() => toggleTheme()}>
+        {theme === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
+      </span>
     </HeaderWrapper>
   );
 }
