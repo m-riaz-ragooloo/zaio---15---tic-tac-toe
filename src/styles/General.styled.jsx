@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+  background-color: ${(props) => props.theme.colors.primary};
+  padding: 0 2rem;
+  text-align: center;
+`;
+
 export const Title = styled.h1`
     color: ${(props) => props.theme.colors.text};
     font-size: 3rem;
@@ -8,9 +20,8 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.h2`
-    color: ${(props) => props.theme.colors.text}
+    color: ${(props) => props.theme.colors.text};
     font-size: 24px;
-    font-family: "Poppins", sans-serif;
     font-weight: 200;
     background-color: transparent;
 `
